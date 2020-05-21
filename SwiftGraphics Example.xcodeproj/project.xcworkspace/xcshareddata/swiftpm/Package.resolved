@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "SwiftGraphics",
+        "repositoryURL": "https://github.com/emorydunn/SwiftGraphics.git",
+        "state": {
+          "branch": "master",
+          "revision": "b9e59064445068d1c40d2b4ebe061d26f76550d4",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
