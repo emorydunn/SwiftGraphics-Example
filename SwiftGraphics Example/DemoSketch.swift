@@ -10,7 +10,12 @@ import Foundation
 import SwiftGraphics
 
 class IntersectionTest: Sketch {
-    var title: String = "IntersectionTest"
+
+    static var title: String = "IntersectionTest"
+    
+    var size: Size = Size(width: 1000, height: 1000)
+    
+    var loop: SketchAnimation = .none
     
     var bb: BoundingBox!
     
@@ -21,22 +26,22 @@ class IntersectionTest: Sketch {
     // Ray Tracing
     let emitter = DirectionalEmitter(Vector(x: 200, y: 500), -30)
     let circleEmitter = CircleEmitter(x: 600, y: 700, radius: 35, rayStep: 1)
-    let fresnel = Fesnel(200, 200, 400, 400)
+    let fresnel = Fresnel(200, 200, 400, 400)
     
-    func setup() {
+    required init() {
         
-        context?.setBlendMode(.lighten)
+        SwiftGraphicsContext.blendMode = .lighten
         bb = BoundingBox(inset: 100)
     }
     
     func draw() {
         
         // Draw a solid background
-        context?.setFillColor(.init(gray: 0.2, alpha: 1))
+        SwiftGraphicsContext.fillColor = Color(grey: 0.2)
         BoundingBox(inset: 0).draw()
         
-        context?.setStrokeColor(.init(gray: 0.51, alpha: 1))
-        context?.setFillColor(.clear)
+        SwiftGraphicsContext.strokeColor = Color(grey: 0.51)
+        SwiftGraphicsContext.fillColor = .clear
         
         bb.draw()
         
@@ -46,19 +51,18 @@ class IntersectionTest: Sketch {
         fresnel.draw()
         
         emitter.draw()
-        emitter.draw(boundingBox: bb,
-                     objects: [
-                        testCircle,
-                        testRect,
-                        fresnel
-        ])
+        emitter.draw(objects: [
+            bb,
+            testCircle,
+            testRect,
+            fresnel])
         
-        context?.setStrokeColor(.init(red: 1, green: 0, blue: 0, alpha: 1))
-        circleEmitter.draw(boundingBox: bb,
-                           objects: [
-                            testCircle,
-                            testRect,
-                            fresnel])
+        SwiftGraphicsContext.strokeColor = .red
+        circleEmitter.draw(objects: [
+            bb,
+            testCircle,
+            testRect,
+            fresnel])
         
         
     }

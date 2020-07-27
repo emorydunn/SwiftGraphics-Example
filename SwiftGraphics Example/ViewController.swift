@@ -31,7 +31,7 @@ class ViewController: NSViewController {
         
         let sketch = IntersectionTest()
         sketchView.sketch = sketch
-        view.window?.title = sketch.title
+        view.window?.title = IntersectionTest.title
         
     }
     
