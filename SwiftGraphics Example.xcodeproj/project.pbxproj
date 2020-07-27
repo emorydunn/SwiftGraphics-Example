@@ -12,7 +12,6 @@
 		D28F0A44247700F100413CF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D28F0A43247700F100413CF4 /* Assets.xcassets */; };
 		D28F0A47247700F100413CF4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D28F0A45247700F100413CF4 /* Main.storyboard */; };
 		D28F0A512477012E00413CF4 /* SwiftGraphics in Frameworks */ = {isa = PBXBuildFile; productRef = D28F0A502477012E00413CF4 /* SwiftGraphics */; };
-		D28F0A532477015B00413CF4 /* SketchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28F0A522477015B00413CF4 /* SketchView.swift */; };
 		D28F0A55247703E300413CF4 /* DemoSketch.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28F0A54247703E300413CF4 /* DemoSketch.swift */; };
 /* End PBXBuildFile section */
 
@@ -24,7 +23,6 @@
 		D28F0A46247700F100413CF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D28F0A48247700F100413CF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D28F0A49247700F100413CF4 /* SwiftGraphics_Example.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftGraphics_Example.entitlements; sourceTree = "<group>"; };
-		D28F0A522477015B00413CF4 /* SketchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SketchView.swift; sourceTree = "<group>"; };
 		D28F0A54247703E300413CF4 /* DemoSketch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoSketch.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -62,7 +60,6 @@
 				D28F0A3F247700EF00413CF4 /* AppDelegate.swift */,
 				D28F0A41247700EF00413CF4 /* ViewController.swift */,
 				D28F0A54247703E300413CF4 /* DemoSketch.swift */,
-				D28F0A522477015B00413CF4 /* SketchView.swift */,
 				D28F0A43247700F100413CF4 /* Assets.xcassets */,
 				D28F0A45247700F100413CF4 /* Main.storyboard */,
 				D28F0A48247700F100413CF4 /* Info.plist */,
@@ -148,7 +145,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D28F0A42247700EF00413CF4 /* ViewController.swift in Sources */,
-				D28F0A532477015B00413CF4 /* SketchView.swift in Sources */,
 				D28F0A55247703E300413CF4 /* DemoSketch.swift in Sources */,
 				D28F0A40247700EF00413CF4 /* AppDelegate.swift in Sources */,
 			);
