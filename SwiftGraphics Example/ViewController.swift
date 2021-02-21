@@ -48,16 +48,28 @@ class ViewController: NSViewController {
         savePanel.beginSheetModal(for: view.window!) { (response) in
             switch response {
             case .OK:
-                let image = sketchView.drawToImage()
+
                 do {
-                    try sketchView.saveImage(image, to: self.savePanel.url!)
+                    switch self.savePanel.url!.pathExtension {
+                    case "png":
+                        try sketchView.saveImage(to: self.savePanel.url!)
+                    case "svg":
+                        print("Drawing to SVG")
+                        try sketchView.saveSVG(to: self.savePanel.url!)
+                    default:
+                        break
+                    }
+
+                    let controller = NSWindowController.init(window: self.view.window)
+                    controller.setDocumentEdited(false)
+
                 } catch {
                     self.presentError(error)
                 }
             default:
                 break
             }
-            
+
         }
         
     }
