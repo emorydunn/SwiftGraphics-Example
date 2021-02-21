@@ -31,6 +31,7 @@ class ViewController: NSViewController {
         
         let sketch = IntersectionTest()
         sketchView.sketch = sketch
+        view.window?.setContentSize(sketch.size.nsSize)
         view.window?.title = IntersectionTest.title
         
     }
